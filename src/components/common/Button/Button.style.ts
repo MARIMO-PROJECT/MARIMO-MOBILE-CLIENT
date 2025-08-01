@@ -26,3 +26,8 @@ export const conceptStyle = {
         color: ${theme.colors.new_gray02};
     `,
 }
+
+export const iconStyle = css`
+    width: 1.6rem;
+    height: 1.6rem;
+`;
