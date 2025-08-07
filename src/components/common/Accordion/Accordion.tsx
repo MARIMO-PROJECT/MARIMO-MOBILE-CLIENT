@@ -14,19 +14,17 @@ const Accordion = ({title, children}: AccordionProps) => {
 
   return (
     <div css={accordionWrapper}>
-        <div css={accordionBox(isOpen)} onClick={handleToggle}>
-            <span css={titleStyle}>{title}</span>
-            <div css={iconStyle(isOpen)}>
-                <IcArrowGray0716 />
-            </div>
+      <div css={accordionBox(isOpen)} onClick={handleToggle}>
+        <span css={titleStyle}>{title}</span>
+        <IcArrowGray0716 width={16} height={16} css={iconStyle(isOpen)} />
+      </div>
+      {isOpen && (
+        <div css={accordionContentWrapper}>
+          <div css={accordionChildrenWrapper}>{children}</div>
         </div>
-        {isOpen && (
-            <div css={accordionContentWrapper}>
-                <div css={accordionChildrenWrapper}>{children}</div>
-            </div>
-        )}
+      )}
     </div>
-  )
+  );
 }
 
 export default Accordion

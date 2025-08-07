@@ -3,12 +3,13 @@ import { css } from "@emotion/react";
 import { flexGenerator } from "../../../styles/generator";
 
 export const buttonStyle = css`
-    ${flexGenerator()}
-    width: 100%;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    cursor: pointer;
+  ${flexGenerator()}
+  width: fit-content;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  white-space: nowrap;
 `;
 
 export const variantStyle = {
