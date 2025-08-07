@@ -7,27 +7,28 @@ export const accordionWrapper = css`
     width: 100%;
 `;
 
-export const accordionBox = (isOpen: boolean) => css`
+export const accordionBox = (isOpen: boolean) => (theme: Theme) =>
+  css`
     ${flexGenerator("row", "space-between")}
     width: 100%;
-    padding: 1.5rem 2.7rem 1.5rem 2rem;
+    padding: 1.8rem 2.5rem;
     cursor: pointer;
+    background-color: ${theme.colors.white};
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     border-bottom-left-radius: ${isOpen ? "0" : "4px"};
     border-bottom-right-radius: ${isOpen ? "0" : "4px"};
-`;
+  `;
 
 export const titleStyle = (theme: Theme) => css`
-    color: ${theme.colors.black};
+  ${theme.fonts.mb2_body02_14_m}
+  color: ${theme.colors.black};
 `;
 
 export const iconStyle = (isOpen: boolean) => css`
-    ${flexGenerator()}
-    width: 1.4rem;
-    height: 0.7rem;
-    transition: transform 0.3s ease;
-    transform: rotate(${isOpen ? "180deg" : "0deg"});
+  ${flexGenerator()}
+  transition: transform 0.3s ease;
+  transform: rotate(${isOpen ? "180deg" : "0deg"});
 `;
 
 

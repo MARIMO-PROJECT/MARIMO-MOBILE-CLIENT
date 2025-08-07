@@ -11,10 +11,10 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = ({concept, icon, children, onClick}: ButtonProps) => {
   return (
     <button css={[buttonStyle, conceptStyle[concept]]} onClick={onClick}>
-        <span css={iconStyle}>{icon}</span>
-        {children}
+      {icon && <span css={iconStyle}>{icon}</span>}
+      {children}
     </button>
-  )
+  );
 }
 
 export default Button

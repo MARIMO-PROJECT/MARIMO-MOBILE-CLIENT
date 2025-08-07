@@ -2,7 +2,7 @@ import { imageStyle } from "./Image.style";
 
 interface ImageProps {
     src: string;
-    alt,
+    alt: string;
 }
 
 const Image = ({src, alt}: ImageProps) => {
