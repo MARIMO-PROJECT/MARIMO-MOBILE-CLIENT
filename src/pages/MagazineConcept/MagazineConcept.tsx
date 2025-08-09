@@ -51,7 +51,7 @@ import {
   thumbnailContainer,
 } from "./MagazineConcept.style";
 import Modal from "../../components/common/Modal/Modal";
-import MessageCardWriteModal from "../../components/common/MessageCardWriteModal/MessageCardWriteModal";
+import MessageCardWriteModal from "../../components/common/CommonModal/MessageCardWriteModal";
 
 const thumbnailImage = "/images/magazine_thumbnail.png";
 const filmImage = "/images/magazine_film.png";
