@@ -26,3 +26,7 @@ export const cardTextStyle = (theme: Theme) => css`
     ${theme.fonts.mc2_caption02_12_re}
     color: ${theme.colors.gray05};
 `;
+
+export const deleteIconStyle = css`
+  cursor: pointer;
+`;
