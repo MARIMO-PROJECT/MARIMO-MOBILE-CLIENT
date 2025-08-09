@@ -20,8 +20,8 @@ export const labelTextStyle = (theme: Theme) => css`
 `;
 
 export const essentialTextStyle = (theme: Theme) => css`
-    /* ${theme.fonts.mc} */
-    color: ${theme.colors.gray04};
+  ${theme.fonts.mc5_caption05_12_8}
+  color: ${theme.colors.gray04};
 `;
 
 export const inputStyle = (theme: Theme) => css`
@@ -44,21 +44,22 @@ export const inputStyle = (theme: Theme) => css`
 `;
 
 export const textareaStyle = (theme: Theme) => css`
-    width: 100%;
-    padding: 1.6rem 1.2rem;
-    border: 1px solid ${theme.colors.new_gray01};
-    border-radius: 4px;
-    resize: none;
+  width: 100%;
+  height: 20rem;
+  padding: 1.6rem 1.2rem;
+  border: 1px solid ${theme.colors.new_gray01};
+  border-radius: 4px;
+  resize: none;
+  ${theme.fonts.mb3_body03_14_re_narrow}
+  color: ${theme.colors.black};
+
+  &::placeholder {
     ${theme.fonts.mb3_body03_14_re_narrow}
-    color: ${theme.colors.black};
+    color: ${theme.colors.new_gray01};
+  }
 
-    &::placeholder {
-        ${theme.fonts.mb3_body03_14_re_narrow}
-        color: ${theme.colors.new_gray01};
-    }
-
-    &:focus {
-        outline: none;
-        border-color: ${theme.colors.new_gray02};
-    }
+  &:focus {
+    outline: none;
+    border-color: ${theme.colors.new_gray02};
+  }
 `;

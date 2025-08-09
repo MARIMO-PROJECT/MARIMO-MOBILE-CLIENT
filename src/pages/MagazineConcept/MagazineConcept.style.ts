@@ -214,12 +214,13 @@ export const gradationStyle = css`
   left: 0;
   right: 0;
   width: 100%;
-  height: 333px;
+  height: 100%;
   background: linear-gradient(
     180deg,
     rgba(248, 248, 248, 0) 17.77%,
     #f8f8f8 91.99%
   );
+  pointer-events: none;
 `;
 
 export const buttonWrapper = css`

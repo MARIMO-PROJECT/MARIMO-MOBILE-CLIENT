@@ -143,6 +143,13 @@ export const theme = {
       line-height: 14px;
       letter-spacing: -0.96px;
     `,
+    mc5_caption05_12_8: css`
+      ${PretendardFont};
+      font-weight: 400;
+      font-size: 0.8rem;
+      line-height: 10px;
+      letter-spacing: -0.48px;
+    `,
   },
 };
 

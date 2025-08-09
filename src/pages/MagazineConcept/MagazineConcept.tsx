@@ -50,6 +50,8 @@ import {
   soundIconStyle,
   thumbnailContainer,
 } from "./MagazineConcept.style";
+import Modal from "../../components/common/Modal/Modal";
+import MessageCardWriteModal from "../../components/common/MessageCardWriteModal/MessageCardWriteModal";
 
 const thumbnailImage = "/images/magazine_thumbnail.png";
 const filmImage = "/images/magazine_film.png";
@@ -102,6 +104,10 @@ const endImage = "/images/img_magazine_end.png";
 const MagazineConcept = () => {
   const [isMessageExpanded, setIsMessageExpanded] = useState(false);
   const [isGalleryExpanded, setIsGalleryExpanded] = useState(false);
+  const [isWriteModalOpen, setIsWriteModalOpen] = useState(false);
+
+  const openModal = () => setIsWriteModalOpen(true);
+  const closeModal = () => setIsWriteModalOpen(false);
 
   const visibleMessageCards = isMessageExpanded
     ? guestbook
@@ -203,9 +209,15 @@ const MagazineConcept = () => {
                 text="작성"
                 icon={<IcWrite />}
                 size={14}
+                onClick={openModal}
               />
             </div>
           </div>
+          {isWriteModalOpen && (
+            <Modal onClose={closeModal}>
+              <MessageCardWriteModal onClose={closeModal} />
+            </Modal>
+          )}
           <div css={messageCardList}>
             {visibleMessageCards.map((card, i) => (
               <MessageCard name={card.name} message={card.message} key={i} />
