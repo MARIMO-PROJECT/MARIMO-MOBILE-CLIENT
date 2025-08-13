@@ -1,7 +1,11 @@
 export { default as Copy } from "./Copy";
 export { default as IcArrowGray0716 } from "./IcArrowGray0716";
+export { default as IcCheckAfter } from "./IcCheckAfter";
+export { default as IcCheckBefore } from "./IcCheckBefore";
 export { default as IcDeleteGray0412 } from "./IcDeleteGray0412";
 export { default as IcDeleteGray0428 } from "./IcDeleteGray0428";
+export { default as IcMinus } from "./IcMinus";
+export { default as IcPlus } from "./IcPlus";
 export { default as IcShare } from "./IcShare";
 export { default as IcSound } from "./IcSound";
 export { default as IcWrite } from "./IcWrite";

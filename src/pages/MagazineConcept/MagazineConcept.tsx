@@ -52,6 +52,7 @@ import {
 } from "./MagazineConcept.style";
 import Modal from "../../components/common/Modal/Modal";
 import MessageCardWriteModal from "../../components/common/CommonModal/MessageCardWriteModal";
+import RsvpModal from "../../components/common/CommonModal/RsvpModal";
 
 const thumbnailImage = "/images/magazine_thumbnail.png";
 const filmImage = "/images/magazine_film.png";
@@ -105,9 +106,13 @@ const MagazineConcept = () => {
   const [isMessageExpanded, setIsMessageExpanded] = useState(false);
   const [isGalleryExpanded, setIsGalleryExpanded] = useState(false);
   const [isWriteModalOpen, setIsWriteModalOpen] = useState(false);
+  const [isRsvpModalOpen, setIsRsvpModalOpen] = useState(false);
 
-  const openModal = () => setIsWriteModalOpen(true);
-  const closeModal = () => setIsWriteModalOpen(false);
+  const openWriteModal = () => setIsWriteModalOpen(true);
+  const closeWriteModal = () => setIsWriteModalOpen(false);
+
+  const openRsvpModal = () => setIsRsvpModalOpen(true);
+  const closeRsvpModal = () => setIsRsvpModalOpen(false);
 
   const visibleMessageCards = isMessageExpanded
     ? guestbook
@@ -209,13 +214,13 @@ const MagazineConcept = () => {
                 text="작성"
                 icon={<IcWrite />}
                 size={14}
-                onClick={openModal}
+                onClick={openWriteModal}
               />
             </div>
           </div>
           {isWriteModalOpen && (
-            <Modal onClose={closeModal}>
-              <MessageCardWriteModal onClose={closeModal} />
+            <Modal onClose={closeWriteModal}>
+              <MessageCardWriteModal onClose={closeWriteModal} />
             </Modal>
           )}
           <div css={messageCardList}>
@@ -258,8 +263,15 @@ const MagazineConcept = () => {
             <Accordion title="신부측 연락처"></Accordion>
           </div>
           <div css={buttonWrapper}>
-            <Button concept="magazine">참석의사 전달하기</Button>
+            <Button concept="magazine" onClick={openRsvpModal}>
+              참석의사 전달하기
+            </Button>
           </div>
+          {isRsvpModalOpen && (
+            <Modal onClose={closeRsvpModal}>
+              <RsvpModal onClose={closeRsvpModal} />
+            </Modal>
+          )}
         </div>
       </section>
       <div css={sectionDivider} />

@@ -2,7 +2,14 @@ import { useState, type ChangeEvent } from "react"
 import { IcDeleteGray0428 } from "../../../assets/svgs";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
-import { bodyContainer, buttonWrapper, deleteIconStyle, headerContainer, headerH1Style, modalContainer } from "./MessageCardModal.style";
+import {
+  bodyContainer,
+  buttonWrapper,
+  deleteIconStyle,
+  headerContainer,
+  headerH1Style,
+  modalContainer,
+} from "./CommonModal.style";
 
 interface MessageCardDeleteModalProps {
     onClose: () => void;
