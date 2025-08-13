@@ -3,20 +3,20 @@ import { flexGenerator } from "../../../styles/generator";
 import type { Theme } from "@emotion/react";
 
 export const inputContainer = css`
-    ${flexGenerator('column', 'flex-start', 'flex-start')}
-    gap: 1.4rem;
-    width: 100%;
+  ${flexGenerator("column", "flex-start", "flex-start")}
+  gap: 1.4rem;
+  width: 100%;
 `;
 
 export const labelWrapper = css`
-    ${flexGenerator('row', 'flex-start', 'center')}
-    gap: 0.4rem;
-    width: 100%;
+  ${flexGenerator("row", "flex-start", "center")}
+  gap: 0.4rem;
+  width: 100%;
 `;
 
 export const labelTextStyle = (theme: Theme) => css`
-    ${theme.fonts.mc1_caption01_12_m}
-    color: ${theme.colors.new_gray02};
+  ${theme.fonts.mc1_caption01_12_m}
+  color: ${theme.colors.new_gray02};
 `;
 
 export const essentialTextStyle = (theme: Theme) => css`
@@ -25,22 +25,22 @@ export const essentialTextStyle = (theme: Theme) => css`
 `;
 
 export const inputStyle = (theme: Theme) => css`
-    width: 100%;
-    padding: 1.7rem 1.5rem;
-    border: 1px solid ${theme.colors.new_gray01};
-    border-radius: 4px;
+  width: 100%;
+  padding: 1.7rem 1.5rem;
+  border: 1px solid ${theme.colors.new_gray01};
+  border-radius: 4px;
+  ${theme.fonts.mb2_body02_14_m}
+  color: ${theme.colors.black};
+
+  &::placeholder {
     ${theme.fonts.mb2_body02_14_m}
-    color: ${theme.colors.black};
+    color: ${theme.colors.new_gray01};
+  }
 
-    &::placeholder {
-        ${theme.fonts.mb2_body02_14_m}
-        color: ${theme.colors.new_gray01};
-    }
-
-    &:focus {
-        outline: none;
-        border-color: ${theme.colors.new_gray02};
-    }
+  &:focus {
+    outline: none;
+    border-color: ${theme.colors.new_gray02};
+  }
 `;
 
 export const textareaStyle = (theme: Theme) => css`
