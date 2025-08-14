@@ -3,19 +3,26 @@ import { flexGenerator } from "../../../styles/generator";
 import type { Theme } from "@emotion/react";
 
 export const modalContainer = (theme: Theme) => css`
-  ${flexGenerator("column")}
+  ${flexGenerator("column", "flex-start", "flex-start")}
   width: 29rem;
   border-radius: 4px;
   background-color: ${theme.colors.gray01};
+  max-height: calc(100dvh - 10rem);
+  overflow: hidden;
+`;
+
+export const modalWrapper = css`
+  overflow-y: scroll;
 `;
 
 export const headerContainer = (theme: Theme) => css`
   ${flexGenerator()}
-  flex-shrink: 0;
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100%;
   padding: 2.2rem 2.4rem 2rem 2.4rem;
   border-bottom: 1px solid ${theme.colors.new_gray01};
+  background-color: ${theme.colors.gray01};
 `;
 
 export const headerH1Style = (theme: Theme) => css`
@@ -49,11 +56,12 @@ export const inputWrapper = css`
 `;
 
 // RsvpModal
-export const rsvpBodyContainer = css`
+export const rsvpBodyContainer = (theme: Theme) => css`
   ${flexGenerator("column")}
   width: 100%;
   gap: 4.4rem;
   padding: 2.2rem 2.1rem 2.2rem 2.1rem;
+  background-color: ${theme.colors.gray01};
 `;
 
 export const rsvpFormWrapper = css`
