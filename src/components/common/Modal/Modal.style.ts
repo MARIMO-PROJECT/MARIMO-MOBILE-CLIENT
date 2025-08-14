@@ -1,6 +1,5 @@
-import { Theme, css } from '@emotion/react';
-import { flexGenerator } from '../../../styles/generator';
-
+import { Theme, css } from "@emotion/react";
+import { flexGenerator } from "../../../styles/generator";
 
 export const backdropStyle = css`
   position: fixed;
@@ -13,7 +12,6 @@ export const backdropStyle = css`
   z-index: 3;
 
   background: rgba(10, 10, 10, 0.6);
-  /* backdrop-filter: blur(5px); */
 `;
 
 export const modalContentStyle = (theme: Theme) => css`
